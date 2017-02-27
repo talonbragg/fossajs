@@ -16,6 +16,8 @@ function fossa(option) {
 	let structure = option.struc;
 	let divText = option.divText;
 	let divBackground = option.divBackground;
+	let headerText = option.headerText;
+	let optForHeader = option.optForHeader;
 
 	//Functional section
 
@@ -64,6 +66,21 @@ function fossa(option) {
 		}
 		else if(!divBackground) {
 			console.log('Warning: No *div background* specified')
+		}
+	})();
+	//Main Function For Header
+	(function() {
+		if (!optForHeader) {
+			console.log('No Header specified, this is fine');
+		}
+		else if (optForHeader === "n") {
+			console.log('No header wanted');
+		}
+		else if(optForHeader === "y") {
+			let header = document.createElement("header");
+			let hText = document.createTextNode(headerText);
+			header.appendChild(hText);
+			body.appendChild(header);
 		}
 	})();
 }
