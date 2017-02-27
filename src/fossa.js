@@ -5,6 +5,8 @@
  * Licensed under the MIT License
 */
 
+'use strict';
+
 let body = document.getElementsByTagName("body")[0];
 if (!body) console.log(err);
 
@@ -25,7 +27,7 @@ function fossa(option) {
 	(function() {
 		document.getElementsByTagName('title')[0].innerHTML = title;
 	})();
-	// Append divs
+	//Append divs
 	(function() {
 		// Append strict structure
 		if (structure === "strict") {
@@ -48,13 +50,15 @@ function fossa(option) {
 			let span1 = document.createElement("span");
 			let text3 = document.createTextNode(divText);
 			span1.appendChild(text3);
-			body.appendChild(span1)
-		
-		//Background For body
-		(function() {
-			body.style.background = divBackground;
-		})();
-		// Main If statments for error handling
+			body.appendChild(span1);
+		}
+	})();
+	//Background For body
+	(function() {
+		body.style.background = divBackground;
+	})();
+	//If statements for error handling
+	(function() {
 		if(!title) {
 			console.log('Warning: No *title* specified');
 		}
@@ -68,7 +72,6 @@ function fossa(option) {
 			console.log('Warning: No *div background* specified')
 		}
 	})();
-	//Main Function For Header
 	(function() {
 		if (!optForHeader) {
 			console.log('No Header specified, this is fine');
