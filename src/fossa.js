@@ -82,5 +82,8 @@ function fossa(option) {
 			header.appendChild(hText);
 			body.appendChild(header);
 		}
+		else if(!headerText) {
+			console.log('Warning: No Header text \n there will be no text in the header \n it is recommended that you go and add text for the header.')
+		}
 	})();
 }
