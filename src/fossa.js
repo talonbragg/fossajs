@@ -12,6 +12,7 @@ function fossa(option) {
 	})();
 	// Append divs
 	(function() {
+		// Append strict structure
 		if (structure === "strict") {
 			let div1 = createElement("div");
 			let div2 = createElement("div");
@@ -20,6 +21,11 @@ function fossa(option) {
 			div1.appendChild(div2);
 			body.appendChild(div1);
 		}
-		else if(structure === "loose")
+		else if(structure === "loose") {
+			let div3 = createElement("div");
+			let text2 = document.createTextNode(divText);
+			div3.appendChild(text2);
+			body.appendChild(div3);
+		}
 	})();
 }
