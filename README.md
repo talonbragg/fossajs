@@ -1,2 +1,2 @@
 # fossajs
-A JavaScript Library for Wesite Structure
+A JavaScript Library for Website Structure
