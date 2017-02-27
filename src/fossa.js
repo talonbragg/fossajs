@@ -27,5 +27,11 @@ function fossa(option) {
 			div3.appendChild(text2);
 			body.appendChild(div3);
 		}
+		else if(structure === "sagging") {
+			let span1 = document.createElement("span");
+			let text3 = document.createTextNode(divText);
+			span1.appendChild(text3);
+			body.appendChild(span1)
+		}
 	})();
 }
