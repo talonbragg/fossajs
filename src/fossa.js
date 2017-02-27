@@ -10,7 +10,7 @@ function fossa(option) {
 	(function() {
 		document.getElementsByTagName('title')[0].innerHTML = title;
 	})();
-	// Append one div
+	// Append divs
 	(function() {
 		if (structure === "strict") {
 			let div1 = createElement("div");
