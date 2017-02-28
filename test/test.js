@@ -1,4 +1,8 @@
-/*
+var assert = require('assert');
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('Should make a javascript library for Website structure', function() {
+      /*
  * fossajs 
  * Copyright Talon Bragg 2017
  * fossajs.com (Coming Soon)
@@ -197,3 +201,7 @@ function fossa(option) {
 		}
 	})();
 }
+
+    });
+  });
+});
