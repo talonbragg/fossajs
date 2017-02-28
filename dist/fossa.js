@@ -11,24 +11,70 @@ var body = document.getElementsByTagName("body")[0];
 if (!body) console.log(err);
 
 //Object Oriented
+
+/*
+ * Object Constructor
+ * @param {option.item}
+ * Carried as a string
+*/
+
 function fossa(option) {
 	//Main Variables
+
+	/*
+  * Object Variables
+  * @param {option.item}
+  * Carried as a string
+  * Depends on the variable for the type 
+ */
+
 	var title = option.title;
 	var structure = option.struc;
 	var divText = option.divText;
 	var divBackground = option.divBackground;
 	var headerText = option.headerText;
 	var optForHeader = option.optForHeader;
+	var padding = option.pad;
+	var margin = option.mar;
 
 	//Functional section
-
+	/*
+  * Creates functionality for object items
+  * @param {option.object}
+  * Uses string functionality
+ */
 	// Make the title
+
+	/*
+  * Gets The title tag and adds the title
+  * object item "title" which is taken as 
+  * a string
+  * @param {string} innerHTML = title
+ */
 	(function () {
 		document.getElementsByTagName('title')[0].innerHTML = title;
 	})();
+
 	//Append divs
+	/*
+  * Creates The divide structure of a
+  * webpage
+  * @param {string} structure === "strict"
+  * Object constructor item struc has 3 options:
+  * "strict"
+  * "loose"
+  * "sagging"
+  * Anything other that these will be taken by the console
+  * as undefined
+ */
+
 	(function () {
 		// Append strict structure
+
+		/*
+   * @param {string} "strict"
+  */
+
 		if (structure === "strict") {
 			var div1 = createElement("div id='div1'");
 			var div2 = createElement("div id='div2'");
@@ -38,6 +84,11 @@ function fossa(option) {
 			body.appendChild(div1);
 		}
 		// Append loose structure
+
+		/*
+   * @param {string} "loose" 
+  */
+
 		else if (structure === "loose") {
 				var div3 = createElement("div id='div3'");
 				var text2 = document.createTextNode(divText);
@@ -45,6 +96,9 @@ function fossa(option) {
 				body.appendChild(div3);
 			}
 			// Append sagging structure
+			/*
+    * @param {string} "sagging"
+   */
 			else if (structure === "sagging") {
 					var span1 = document.createElement("span1");
 					var text3 = document.createTextNode(divText);
@@ -53,10 +107,41 @@ function fossa(option) {
 				}
 	})();
 	//Background For body
+
+	/*
+ * Taken as a string
+ * @param {string} divBackground
+ */
 	(function () {
 		body.style.background = divBackground;
 	})();
+	//Padding for body
+
+	/*
+  * Sets the padding of the body
+  * returned as a string
+  * css interprets the string
+  * @param {string} padding;
+ */
+
+	(function () {
+		body.style.padding = padding;
+	})();
+	//Margin of body
+
+	/*
+  * returned as a string
+  * usable as a number
+  * @param {integer} margin
+ */
+	(function () {
+		body.style.margin = margin;
+	})();
 	//If statements for error handling
+
+	/*
+  * Logs any errors or warnings into the console
+ */
 	(function () {
 		if (!title) {
 			console.log('Warning: No *title* specified');
@@ -68,6 +153,14 @@ function fossa(option) {
 			console.log('Warning: No *div background* specified');
 		}
 	})();
+	//Header functions
+
+	/*
+  * Object constructor item optForHead is taken as a string
+  * headerText is also taken as a string
+  * @param {string} optForHeader & headerText
+ */
+
 	(function () {
 		if (!optForHeader) {
 			console.log('No Header specified, this is fine');
