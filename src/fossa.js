@@ -56,6 +56,7 @@ function fossa(option) {
 	})();
 	
 	//Append divs
+	
 	/*
 	 * Creates The divide structure of a
 	 * webpage
