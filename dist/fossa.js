@@ -31,8 +31,8 @@ function fossa(option) {
 	(function () {
 		// Append strict structure
 		if (structure === "strict") {
-			var div1 = createElement("div");
-			var div2 = createElement("div");
+			var div1 = createElement("div id='div1'");
+			var div2 = createElement("div id='div2'");
 			var text = document.createTextNode(divText);
 			div2.appendChild(text);
 			div1.appendChild(div2);
@@ -40,14 +40,14 @@ function fossa(option) {
 		}
 		// Append loose structure
 		else if (structure === "loose") {
-				var div3 = createElement("div");
+				var div3 = createElement("div id='div3'");
 				var text2 = document.createTextNode(divText);
 				div3.appendChild(text2);
 				body.appendChild(div3);
 			}
 			// Append sagging structure
 			else if (structure === "sagging") {
-					var span1 = document.createElement("span");
+					var span1 = document.createElement("span1");
 					var text3 = document.createTextNode(divText);
 					span1.appendChild(text3);
 					body.appendChild(span1);
