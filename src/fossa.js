@@ -34,6 +34,8 @@ function fossa(option) {
 	let divBackground = option.divBackground;
 	let headerText = option.headerText;
 	let optForHeader = option.optForHeader;
+	let padding = option.pad;
+	let margin = option.mar;
 
 	//Functional section
 	/*
@@ -112,6 +114,28 @@ function fossa(option) {
 	*/
 	(function() {
 		body.style.background = divBackground;
+	})();
+	//Padding for body
+
+	/*
+	 * Sets the padding of the body
+	 * returned as a string
+	 * css interprets the string
+	 * @param {string} padding;
+	*/
+
+	(function() {
+		body.style.padding = padding; 
+	})();
+	//Margin of body
+
+	/*
+	 * returned as a string
+	 * usable as a number
+	 * @param {integer} margin
+	*/
+	(function() {
+		body.style.margin = margin;
 	})();
 	//If statements for error handling
 
