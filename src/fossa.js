@@ -8,6 +8,7 @@
 'use strict';
 
 let body = document.getElementsByTagName("body")[0];
+let fossajs = module.exports;
 if (!body) console.log(err);
 
 //Object Oriented
@@ -36,6 +37,8 @@ function fossa(option) {
 	let optForHeader = option.optForHeader;
 	let padding = option.pad;
 	let margin = option.mar;
+	let custom = option.custEl;
+	let cClass = option.cClass;
 
 	//Functional section
 	/*
@@ -105,6 +108,25 @@ function fossa(option) {
 			let text3 = document.createTextNode(divText);
 			span1.appendChild(text3);
 			body.appendChild(span1);
+		}
+	})();
+	//Custom elements
+
+	/*
+	* Creates your own element
+	* Also allows you to add you own
+	* custom class to the custom element
+	* @param {object.item} returned as string
+	* @param {string} custom
+	* @param {string} cClass
+	*/
+	(function() {
+		if (custom && structure === "custom") {
+			let div1 = createElement(custom);
+			div1.setAttribute('class', cClass);
+			let text = document.createTextNode(divText);
+			div1.appendChild(text);
+			body.appendChild(div1);
 		}
 	})();
 	//Background For body

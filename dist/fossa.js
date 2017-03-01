@@ -3,12 +3,12 @@
  * Copyright Talon Bragg 2017
  * fossajs.com (Coming Soon)
  * Licensed under the MIT License
- * Go on down and see!
 */
 
 'use strict';
 
 var body = document.getElementsByTagName("body")[0];
+var fossajs = module.exports;
 if (!body) console.log(err);
 
 //Object Oriented
@@ -37,6 +37,8 @@ function fossa(option) {
 	var optForHeader = option.optForHeader;
 	var padding = option.pad;
 	var margin = option.mar;
+	var custom = option.custEl;
+	var cClass = option.cClass;
 
 	//Functional section
 	/*
@@ -57,6 +59,7 @@ function fossa(option) {
 	})();
 
 	//Append divs
+
 	/*
   * Creates The divide structure of a
   * webpage
@@ -107,6 +110,25 @@ function fossa(option) {
 					body.appendChild(span1);
 				}
 	})();
+	//Custom elements
+
+	/*
+ * Creates your own element
+ * Also allows you to add you own
+ * custom class to the custom element
+ * @param {object.item} returned as string
+ * @param {string} custom
+ * @param {string} cClass
+ */
+	(function () {
+		if (custom && structure === "custom") {
+			var div1 = createElement(custom);
+			div1.setAttribute('class', cClass);
+			var text = document.createTextNode(divText);
+			div1.appendChild(text);
+			body.appendChild(div1);
+		}
+	})();
 	//Background For body
 
 	/*
@@ -150,8 +172,23 @@ function fossa(option) {
 			console.log('Warning: No *structure type* specified');
 		} else if (!divText) {
 			console.log('Warning: No *div text* specified');
-		} else if (!divBackground) {
-			console.log('Warning: No *div background* specified');
+		}
+		//Main error handling for css
+
+		/*
+   * These are taken as strings
+   * emits a warning if it was not used
+   * @param {string} css
+  */
+		else if (!divBackground) {
+				console.log('Warning: No *div background* specified');
+			}
+		if (!padding) {
+			console.log('Warning: No Padding specified');
+			console.log('You may want padding for the website to look nicer');
+		} else if (!margin) {
+			console.log('Warning: No margin specified');
+			console.log('The body will be at its default margin: 10px');
 		}
 	})();
 	//Header functions
