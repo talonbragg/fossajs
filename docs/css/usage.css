@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+body {
+    font-family:'Quicksand';
+    margin:0;
+    padding:0;
+    background-color:#f5f5f5;
+}
+p {
+    font-size:30px;
+}
+.nav {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    background: #f5f5f5;
+    outline:0.5px solid gray;
+    font-size:30px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Raleway';
+}
+.right {
+    width:69%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    background: #f5f5f5;
+}
+a {
+  text-decoration: none;
+  color: #4274c4;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+a:hover {
+  color: #4274c4;
+  text-decoration: none;
+}
+.get {
+    color:#64d1a5;
+}
+ul {
+    list-style-type:none;
+}
+/* Code Styles */
+pre code {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size:15px;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+pre code::after {
+  content: attr(lang);
+  font-size: 1.5rem;
+  color: #BFBFBF;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+}
+/* Color Picker */
+.special {
+    color:#4286f4;
+}
+.tag {
+    color:#0d94c1;
+}
+.string {
+    color:#1caf8d;
+}
+.comment {
+    color: #989898;
+}
+.var {
+    color:#7693c1;
+}
