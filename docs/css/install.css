@@ -69,3 +69,19 @@ code {
   border: 1px solid #E1E1E1;
   border-radius: 4px;
 }
+/* Color Picker */
+.special {
+    color:#4286f4;
+}
+.tag {
+    color:#0d94c1;
+}
+.string {
+    color:#63d8bd;
+}
+.comment {
+    color: #989898;
+}
+.var {
+    color:#bde539;
+}
