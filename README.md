@@ -1,4 +1,6 @@
 # fossajs
+<img src="fjs.png">
+
 [![Build Status](https://travis-ci.org/talonbragg/fossajs.svg?branch=master)](https://travis-ci.org/talonbragg/fossajs)
 
 # Installation
