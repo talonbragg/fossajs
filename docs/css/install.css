@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 body {
     font-family:'Quicksand';
     margin:0;
@@ -15,6 +16,9 @@ p {
     background: #f5f5f5;
     outline:1px solid;
     font-size:30px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Raleway';
 }
 .right {
     width:69%;
