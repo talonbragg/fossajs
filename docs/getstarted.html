@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/get.css">
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <h1>Fossa</h1><br>
+        <li class="install"><a href="install.html">Installation</a></li>
+        <li class="get"><a href="getstarted.html"></a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <h1>Getting Started</h1>
+      <p>After you have installed it you want to create a new object constructor. We will label the var name "app" and put the constructor inside of it.</p>
+      <p>Your full code should look like this</p>
+      <pre>
+        <code>
+          <span class="var">var</span> fossajs = require(<span class="string">'fossajs'</span>);
+          
+          <span class="var">var</span> app = new <span class="var">fossa</span>({
+            <span class="comment">//The code goes here</span>
+          });
+        </code>
+      </pre>
+      <p>This will give you the base for creating the page structure</p>
+      <h2>Example</h2>
+      <p>This will show how the basic build will look, this is explained more in the next section.</p>
+      <pre>
+        <code>
+          <span class="var">var</span> fossajs = require(<span class="string">'fossajs'</span>);
+          
+          <span class="var">var</span> app = new <span class="var">fossa</span>({
+            title: <span class="string">'Example'</span>,
+            struc: <span class="string">'strict'</span>,
+            divText: <span class="string">'Cats are cool'</span>,
+            divBackground: <span class="string">'#f5f5f5'</span>
+          });
+        </code>
+      </pre>
+      <p>These are not all of the object items that can be use, they are just some of them.</p>
+    </div>
+  </body>
+</html>
