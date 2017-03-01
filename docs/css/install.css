@@ -37,10 +37,6 @@ a:hover {
   color: #4274c4;
   text-decoration: none;
 }
-a,visited{
-  text-decoration: none;
-  color: #4274c4;
-}
 .install {
     color:#64d1a5;
 }
