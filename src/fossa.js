@@ -164,6 +164,7 @@ function fossa(option) {
 
 	/*
 	 * Logs any errors or warnings into the console
+	 * @param {string} object.item
 	*/
 	(function() {
 		if(!title) {
@@ -192,6 +193,12 @@ function fossa(option) {
 		else if (!margin) {
 			console.log('Warning: No margin specified')
 			console.log('The body will be at its default margin: 10px')
+		}
+		if (!custom) {
+			console.log('No custom element used, this is fine.');
+		}
+		else if(!cClass) {
+			console.log('No custom class used, this is fine.');
 		}
 	})();
 	//Header functions
