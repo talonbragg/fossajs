@@ -5,6 +5,11 @@
  * Licensed under the MIT License
 */
 
+(function(root, factory) {
+  /* ======= Global Moon ======= */
+  (typeof module === "object" && module.exports) ? module.exports = factory() : root.Moon = factory();
+}(this, function() {
+
 'use strict';
 
 let body = document.getElementsByTagName("body")[0];
@@ -243,3 +248,4 @@ function fossa(option) {
 		}
 	})();
 }
+}));
