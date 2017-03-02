@@ -42,3 +42,29 @@ p {
 .subheading {
   font-family: 'Raleway';
 }
+.btn {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  padding:20px;
+  background-color:#AC2EC5;
+  color:white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.btn:hover {
+  -webkit-transition-duration:0.5s; /* Safari */
+  transition-duration:0.5s;
+  background-color:#69137a;
+  text-decoration:none;
+}
+#version {
+  position:fixed;
+  top:2%;
+  right:1%;
+  font-size:20px;
+}
+#logo {
+  position:fixed;
+  top:5%;
+  left:27%;
+}
