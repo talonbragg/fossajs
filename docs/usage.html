@@ -10,6 +10,10 @@
         <li class="install"><a href="install.html">Installation</a></li>
         <br>
         <li class="get"><a href="getstarted.html">Getting Started</a></li>
+        <br>
+        <li><a href="usage.html">Usage</a></li>
+        <br>
+        <li><a href="custom.html">Customizing</a></li>
       </ul>
     </div>
     <div class="right">
@@ -17,7 +21,7 @@
       <p>If you looked at the example in the <a href="gettingstarted.html">getting started</a> section, there wasn't much to it. Here I explain what was going on, If you want to understand the actual javascript, go <a href="https://unpkg.com/fossajs">here</a> and read the comments.</p>
       <h2>Basic Properties</h2>
       <p>Fossa is object oriented, so that means that we are going to be using and object constructor.</p>
-      <pre>
+      <pre lang="js">
         <code>
           <span class="var">var</span> fossa = <span class="special">new</span> fossa({
             <span class="comment">//The properties go here.</span>
@@ -25,7 +29,7 @@
         </code>
       </pre>
         <p>Now, here are all of the properties in one constructor.</p>
-        <pre>
+        <pre lang="JS">
           <code>
             <span class="var">var</span> fossa = <span class="special">new</span> fossa({
               title: <span class="string">'list'</span>,
@@ -37,11 +41,44 @@
               pad: <span class="string">'0'</span>,
               mar: <span class="string">'0'</span>,
               custEl: <span class="string">'&lt;ul&gt;'</span>,
-              cClass: <span class="string">'list'</span>,
+              cClass: <span class="string">'list'</span>
             }); 
           </code>
         </pre>
         <p>These are all of the main options for now.</p>
+        <h2>Explanation</h2>
+        <p>I will give examples to explain what is going on. Checkout the html box to see what happens</p>
+        <span>
+          <pre lang="JS">
+            <code>
+              <span class="var">var</span> fossa = <span class="special">new</span> fossa({
+                title: <span class="string">'Demo'</span>,
+                struc: <span class="string">'strict'</span>,
+                divText: <span class="string">'&lt;p&gt;This is a cool cat demo&lt;/p&gt;'</span>
+              });
+          </code>
+        </pre>
+      </span>
+      <span>
+        <pre lang="HTML">
+          <code>
+            <span class="tag">&lt;head&gt;</span>
+              <span class="tag">&lt;title&gt;</span>Demo<span class="tag">&lt;title&gt;</span>
+            <span class="tag">&lt;/head&gt;</span>
+            <span class="tag">&lt;body&gt;</span>
+              <span class="tag">&lt;div</span> id=<span class="string">"div1"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;div</span> id=<span class="string">"div2"</span><span class="tag">&gt;</span>
+                  <span class="tag">&lt;p&gt;</span>
+                    This is a cool cat demo
+                  <span class="tag">&lt;/p&gt;</span>
+                <span class="tag">&lt;div&gt;</span>
+              <span class="tag">&lt;div&gt;</span>
+              <span class="tag">&lt;script</span> src=<span class="string">"https://unpkg.com/fossajs"</span><span class="tag">&gt;</span><span class="tag">&lt;script&gt;</span>
+            <span class="tag">&lt;/body&gt;</span>
+          </code>
+        </pre>
+      </span>
+      <p>This is mainly what your HTML should look like when you inspect element. The <b>title</b> property edits the title tag, the <b>struc</b> property edits the way that the divs are placed. For <b>struc</b>, there are 4 options, <b>'strict'</b>, <b>'loose'</b>, <b>'sagging'</b>, and <b>'custom'</b>. They are basically self explanitory. Then, the <b>text</b> property, puts what ever you type in between the divs.</p>
     </div>
   </body>
 </html>
