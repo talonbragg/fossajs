@@ -136,6 +136,11 @@ function fossa(option) {
 		}
 	})();
 	//Container Structure
+	/*
+	 * Creates a container using javascript and css
+	 * The object property would be returned as a string
+	 * @param {string} object.item
+	*/
 	(function() {
 		if(optContainer && structure === "container") {
 			let con = createElement('div');
