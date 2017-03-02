@@ -39,6 +39,7 @@ function fossa(option) {
 	let margin = option.mar;
 	let custom = option.custEl;
 	let cClass = option.cClass;
+	let optContainer = option.optCont;
 
 	//Functional section
 	/*
@@ -127,6 +128,21 @@ function fossa(option) {
 			let text = document.createTextNode(divText);
 			div1.appendChild(text);
 			body.appendChild(div1);
+		}
+	})();
+	//Container Structure
+	(function() {
+		if(optContainer && structure === "container") {
+			let con = createElement('div');
+			con.setAttribute('class', 'container');
+			let text = document.createTextNode(divText);
+			con.appendChild(text);
+			body.appendChild(con);
+			let containerStyle = document.getElementsByClassName('container')[0];
+			containerStyle.style.paddingRight = "100px";
+			containerStyle.style.paddingLeft = "100px";
+			containerStyle.marginRight = "auto";
+			containerStyle.marginLeft = "auto";
 		}
 	})();
 	//Background For body
