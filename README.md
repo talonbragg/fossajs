@@ -12,7 +12,7 @@ Put The script tag at the very bottom of your body tag.
 ```html
 <body>
 	<div>Demo</div>
-	<script src="unpkg.com/fossajs"></script>
+	<script src="https://unpkg.com/fossajs"></script>
 </body>
 ```
 
