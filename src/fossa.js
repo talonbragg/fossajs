@@ -6,8 +6,7 @@
 */
 
 (function(root, factory) {
-  /* ======= Global Moon ======= */
-  (typeof module === "object" && module.exports) ? module.exports = factory() : root.Moon = factory();
+  (typeof module === "object" && module.exports) ? module.exports = factory() : root.fossajs = factory();
 }(this, function() {
 
 'use strict';
