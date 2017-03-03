@@ -299,7 +299,23 @@ function fossa(option) {
 		let styleEl = option.style;
 		
 		//Functional section
+		
+		/*
+		 * Mainly changes the style with the 
+		 * .style operator function
+		 * @ param {string} object.item
+		 */
 		(function() {
+			
+			/*
+			 * Tells the DOM to run it only
+			 * if the other option 
+			 * is not used at all
+			 * If they are both not used 
+			 * and something else is being used
+			 * That is not recognized
+			 * it will go as an error 
+			 */
 			if (!elClass) {
 				let realEl = document.getElementById(el);
 				let styleString = styleEl.toString();
@@ -312,9 +328,73 @@ function fossa(option) {
 			}
 			
 			//Error handling
-			if(!el && !style) {
+			if(!el && 
+			   !style &&
+			   !elClass) {
 				console.log('either there are no properties or you have an unrecognized property.');
 			}
 		})();
 	}
+	function redirect(option) {
+			//Local variables for the function
+			/*
+			 * These are taken as strings
+			 * url is where you want the user
+			 * to redirect to
+			 * and the btn is the id of the button
+			 * or class of the button that you want 
+			 * the user to click
+			 * @param {string} object/item
+			 */
+			
+			let url = option.url;
+			let button = option.btn;
+			let buttonC = option.btnC;
+			let classNum = option.cNum;
+			
+			//Functional section
+			
+			/*
+			 * This gets the id of the button
+			 * and gives it an event listener
+			 * so that the DOM knows exactly 
+			 * when to redirect the user to 
+			 * the new page 
+			 */
+			 
+			 (function() {
+				
+				//If statements
+				
+				/*
+				 * Tells the DOM that if
+				 * buttonC and cNum are not
+				 * used then it will do the other
+				 * if statement according to its 
+				 * rules
+				 * This is also vice versa 
+				 * @param {string} object.item
+				 */
+				if(!buttonC && !cNum) {
+ 					let btnId = document.getElementById(button);
+ 					btnId.addEventListener('click', function() {
+							document.location.href = url;
+					});
+ 				}
+ 				
+ 				/*
+ 				 * This tells the DOM that if
+ 				 * button is not used, then go 
+ 				 * ahead and do this function
+ 				 * This is also the other way,
+ 				 * vice versa
+ 				 */
+ 				else if (!button) {
+					let btnClass = document.getElementByClassName()[classNum];
+					btnClass.addEventListener('click', function() {
+							document.location.href = url;
+					});
+				}
+		     })();
+		}
 }));
