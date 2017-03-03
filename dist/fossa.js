@@ -1,251 +1,306 @@
 "use strict";
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function(obj) {
-    return typeof obj;
-} : function(obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*
  * fossajs 
  * Copyright Talon Bragg 2017
  * fossajs.com (Coming Soon)
  * Licensed under the MIT License
+*/
+
+(function (root, factory) {
+	/*========== Global Fossa ==========*/
+	(typeof module === "undefined" ? "undefined" : _typeof(module)) === "object" && module.exports ? module.exports = factory() : root.fossajs = factory();
+})(undefined, function () {
+
+	'use strict';
+
+	var body = document.getElementsByTagName("body")[0];
+	var fossajs = module.exports;
+	if (!body) console.log(err);
+
+	//Object Oriented
+
+	/*
+  * Object Constructor
+  * @param {option.item}
+  * Carried as a string
  */
 
-(function(root, factory) {
-    /* ======= Global Moon ======= */
-    (typeof module === "undefined" ? "undefined" : _typeof(module)) === "object" && module.exports ? module.exports = factory() : root.Moon = factory();
-})(undefined, function() {
+	function fossa(option) {
+		//Main Variables
 
-    'use strict';
+		/*
+   * Object Variables
+   * @param {option.item}
+   * Carried as a string
+   * Depends on the variable for the type 
+  */
 
-    var body = document.getElementsByTagName("body")[0];
-    var fossajs = module.exports;
-    if (!body) console.log(err);
+		var title = option.title;
+		var structure = option.struc;
+		var divText = option.divText;
+		var divBackground = option.divBackground;
+		var headerText = option.headerText;
+		var optForHeader = option.optForHeader;
+		var padding = option.pad;
+		var margin = option.mar;
+		var custom = option.custEl;
+		var cClass = option.cClass;
+		var optContainer = option.optCont;
 
-    //Object Oriented
+		//Functional section
+		/*
+   * Creates functionality for object items
+   * @param {option.object}
+   * Uses string functionality
+  */
+		// Make the title
 
-    /*
-     * Object Constructor
-     * @param {option.item}
-     * Carried as a string
-     */
+		/*
+   * Gets The title tag and adds the title
+   * object item "title" which is taken as 
+   * a string
+   * @param {string} innerHTML = title
+  */
+		(function () {
+			document.getElementsByTagName('title')[0].innerHTML = title;
+		})();
 
-    function fossa(option) {
-        //Main Variables
+		//Append divs
 
-        /*
-         * Object Variables
-         * @param {option.item}
-         * Carried as a string
-         * Depends on the variable for the type 
-         */
+		/*
+   * Creates The divide structure of a
+   * webpage
+   * @param {string} structure === "strict"
+   * Object constructor item struc has 3 options:
+   * "strict"
+   * "loose"
+   * "sagging"
+   * Anything other that these will be taken by the console
+   * as undefined
+  */
 
-        var title = option.title;
-        var structure = option.struc;
-        var divText = option.divText;
-        var divBackground = option.divBackground;
-        var headerText = option.headerText;
-        var optForHeader = option.optForHeader;
-        var padding = option.pad;
-        var margin = option.mar;
-        var custom = option.custEl;
-        var cClass = option.cClass;
-        var optContainer = option.optCont;
+		(function () {
+			// Append strict structure
 
-        //Functional section
-        /*
-         * Creates functionality for object items
-         * @param {option.object}
-         * Uses string functionality
-         */
-        // Make the title
+			/*
+    * @param {string} "strict"
+   */
 
-        /*
-         * Gets The title tag and adds the title
-         * object item "title" which is taken as 
-         * a string
-         * @param {string} innerHTML = title
-         */
-        (function() {
-            document.getElementsByTagName('title')[0].innerHTML = title;
-        })();
+			if (structure === "strict") {
+				var div1 = createElement("div id='div1'");
+				var div2 = createElement("div id='div2'");
+				var text = document.createTextNode(divText);
+				div2.appendChild(text);
+				div1.appendChild(div2);
+				body.appendChild(div1);
+			}
+			// Append loose structure
 
-        //Append divs
+			/*
+    * @param {string} "loose" 
+   */
 
-        /*
-         * Creates The divide structure of a
-         * webpage
-         * @param {string} structure === "strict"
-         * Object constructor item struc has 3 options:
-         * "strict"
-         * "loose"
-         * "sagging"
-         * Anything other that these will be taken by the console
-         * as undefined
-         */
+			else if (structure === "loose") {
+					var div3 = createElement("div id='div3'");
+					var text2 = document.createTextNode(divText);
+					div3.appendChild(text2);
+					body.appendChild(div3);
+				}
+				// Append sagging structure
+				/*
+     * @param {string} "sagging"
+    */
+				else if (structure === "sagging") {
+						var span1 = document.createElement("span1");
+						var text3 = document.createTextNode(divText);
+						span1.appendChild(text3);
+						body.appendChild(span1);
+					}
+		})();
+		//Custom elements
 
-        (function() {
-            // Append strict structure
+		/*
+  * Creates your own element
+  * Also allows you to add you own
+  * custom class to the custom element
+  * @param {object.item} returned as string
+  * @param {string} custom
+  * @param {string} cClass
+  */
+		(function () {
+			if (custom && structure === "custom") {
+				var div1 = createElement(custom);
+				div1.setAttribute('class', cClass);
+				var text = document.createTextNode(divText);
+				div1.appendChild(text);
+				body.appendChild(div1);
+			}
+		})();
+		//Container Structure
+		/*
+   * Creates a container using javascript and css
+   * The object property would be returned as a string
+   * @param {string} object.item
+  */
+		(function () {
+			if (optContainer && structure === "container") {
+				var con = createElement('div');
+				con.setAttribute('class', 'container');
+				var text = document.createTextNode(divText);
+				con.appendChild(text);
+				body.appendChild(con);
+				var containerStyle = document.getElementsByClassName('container')[0];
+				containerStyle.style.paddingRight = "100px";
+				containerStyle.style.paddingLeft = "100px";
+				containerStyle.marginRight = "auto";
+				containerStyle.marginLeft = "auto";
+			}
+		})();
+		//Background For body
 
-            /*
-             * @param {string} "strict"
-             */
+		/*
+  * Taken as a string
+  * @param {string} divBackground
+  */
+		(function () {
+			body.style.background = divBackground;
+		})();
+		//Padding for body
 
-            if (structure === "strict") {
-                var div1 = createElement("div id='div1'");
-                var div2 = createElement("div id='div2'");
-                var text = document.createTextNode(divText);
-                div2.appendChild(text);
-                div1.appendChild(div2);
-                body.appendChild(div1);
-            }
-            // Append loose structure
+		/*
+   * Sets the padding of the body
+   * returned as a string
+   * css interprets the string
+   * @param {string} padding;
+  */
 
-            /*
-             * @param {string} "loose" 
-             */
-            else if (structure === "loose") {
-                var div3 = createElement("div id='div3'");
-                var text2 = document.createTextNode(divText);
-                div3.appendChild(text2);
-                body.appendChild(div3);
-            }
-            // Append sagging structure
-            /*
-             * @param {string} "sagging"
-             */
-            else if (structure === "sagging") {
-                var span1 = document.createElement("span1");
-                var text3 = document.createTextNode(divText);
-                span1.appendChild(text3);
-                body.appendChild(span1);
-            }
-        })();
-        //Custom elements
+		(function () {
+			body.style.padding = padding;
+		})();
+		//Margin of body
 
-        /*
-         * Creates your own element
-         * Also allows you to add you own
-         * custom class to the custom element
-         * @param {object.item} returned as string
-         * @param {string} custom
-         * @param {string} cClass
-         */
-        (function() {
-            if (custom && structure === "custom") {
-                var div1 = createElement(custom);
-                div1.setAttribute('class', cClass);
-                var text = document.createTextNode(divText);
-                div1.appendChild(text);
-                body.appendChild(div1);
-            }
-        })();
-        //Container Structure
-        (function() {
-            if (optContainer && structure === "container") {
-                var con = createElement('div');
-                con.setAttribute('class', 'container');
-                var text = document.createTextNode(divText);
-                con.appendChild(text);
-                body.appendChild(con);
-                var containerStyle = document.getElementsByClassName('container')[0];
-                containerStyle.style.paddingRight = "100px";
-                containerStyle.style.paddingLeft = "100px";
-                containerStyle.marginRight = "auto";
-                containerStyle.marginLeft = "auto";
-            }
-        })();
-        //Background For body
+		/*
+   * returned as a string
+   * usable as a number
+   * @param {integer} margin
+  */
+		(function () {
+			body.style.margin = margin;
+		})();
+		//If statements for error handling
 
-        /*
-         * Taken as a string
-         * @param {string} divBackground
-         */
-        (function() {
-            body.style.background = divBackground;
-        })();
-        //Padding for body
+		/*
+   * Logs any errors or warnings into the console
+   * @param {string} object.item
+  */
+		(function () {
+			if (!title) {
+				console.log('Warning: No *title* specified');
+			} else if (!structure) {
+				console.log('Warning: No *structure type* specified');
+			} else if (!divText) {
+				console.log('Warning: No *div text* specified');
+			}
+			//Main error handling for css
 
-        /*
-         * Sets the padding of the body
-         * returned as a string
-         * css interprets the string
-         * @param {string} padding;
-         */
+			/*
+    * These are taken as strings
+    * emits a warning if it was not used
+    * @param {string} css
+   */
+			else if (!divBackground) {
+					console.log('Warning: No *div background* specified');
+				}
+			if (!padding) {
+				console.log('Warning: No Padding specified');
+				console.log('You may want padding for the website to look nicer');
+			} else if (!margin) {
+				console.log('Warning: No margin specified');
+				console.log('The body will be at its default margin: 10px');
+			}
+			if (!custom) {
+				console.log('No custom element used, this is fine.');
+			} else if (!cClass) {
+				console.log('No custom class used, this is fine.');
+			}
+		})();
+		//Header functions
 
-        (function() {
-            body.style.padding = padding;
-        })();
-        //Margin of body
+		/*
+   * Object constructor item optForHead is taken as a string
+   * headerText is also taken as a string
+   * @param {string} optForHeader & headerText
+  */
 
-        /*
-         * returned as a string
-         * usable as a number
-         * @param {integer} margin
-         */
-        (function() {
-            body.style.margin = margin;
-        })();
-        //If statements for error handling
+		(function () {
+			if (!optForHeader) {
+				console.log('No Header specified, this is fine');
+			} else if (optForHeader === "n") {
+				console.log('No header wanted');
+			} else if (optForHeader === "y") {
+				var header = document.createElement("header");
+				var hText = document.createTextNode(headerText);
+				header.appendChild(hText);
+				body.appendChild(header);
+			} else if (!headerText) {
+				console.log('Warning: No Header text \n there will be no text in the header \n it is recommended that you go and add text for the header.');
+			}
+		})();
+		//Error Handling for unknown properties
+		/*
+   * The property will not be recognized
+   * originally it would do nothing
+   * For the sake of knowing
+   * there is error handling for it
+   * This is not necessarily a syntax error
+   * in the HTML DOM
+   * @param {string} object.item	
+   */
 
-        /*
-         * Logs any errors or warnings into the console
-         * @param {string} object.item
-         */
-        (function() {
-            if (!title) {
-                console.log('Warning: No *title* specified');
-            } else if (!structure) {
-                console.log('Warning: No *structure type* specified');
-            } else if (!divText) {
-                console.log('Warning: No *div text* specified');
-            }
-            //Main error handling for css
+		(function () {
+			if (!title && !structure && !divText && !divBackground && !headerText && !optForHeader && !padding && !margin && !custom && !cClass && !optContainer) {
+				console.log('A property not recognized');
+			}
+		})();
+		(function () {
+			if (!document) {
+				console.log('You have no HTML dom to edit.');
+			}
+		})();
+	}
+	function style(option) {
+		//Local Variables for the function
+		/*
+   * The option el is an id
+   * The option elClass is a class
+   * style is eventually turned into a string
+   * style is not typed as a string
+   * @param {!string} option.style
+  */
 
-            /*
-             * These are taken as strings
-             * emits a warning if it was not used
-             * @param {string} css
-             */
-            else if (!divBackground) {
-                console.log('Warning: No *div background* specified');
-            }
-            if (!padding) {
-                console.log('Warning: No Padding specified');
-                console.log('You may want padding for the website to look nicer');
-            } else if (!margin) {
-                console.log('Warning: No margin specified');
-                console.log('The body will be at its default margin: 10px');
-            }
-            if (!custom) {
-                console.log('No custom element used, this is fine.');
-            } else if (!cClass) {
-                console.log('No custom class used, this is fine.');
-            }
-        })();
-        //Header functions
+		var el = option.el;
+		var elClass = option.elClass;
+		var styleEl = option.style;
 
-        /*
-         * Object constructor item optForHead is taken as a string
-         * headerText is also taken as a string
-         * @param {string} optForHeader & headerText
-         */
+		//Functional section
+		(function () {
+			if (!elClass) {
+				var realEl = document.getElementById(el);
+				var styleString = styleEl.toString();
+				realEl.style = styleString;
+			} else if (!el) {
+				var _realEl = document.getElementByClassName(elClass);
+				var _styleString = styleEl.toString();
+				_realEl.style = _styleString;
+			}
 
-        (function() {
-            if (!optForHeader) {
-                console.log('No Header specified, this is fine');
-            } else if (optForHeader === "n") {
-                console.log('No header wanted');
-            } else if (optForHeader === "y") {
-                var header = document.createElement("header");
-                var hText = document.createTextNode(headerText);
-                header.appendChild(hText);
-                body.appendChild(header);
-            } else if (!headerText) {
-                console.log('Warning: No Header text \n there will be no text in the header \n it is recommended that you go and add text for the header.');
-            }
-        })();
-    }
+			//Error handling
+			if (!el && !style) {
+				console.log('either there are no properties or you have an unrecognized property.');
+			}
+		})();
+	}
 });
