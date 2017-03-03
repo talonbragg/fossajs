@@ -5,7 +5,8 @@
  * Licensed under the MIT License
 */
 
-(function(root, factory) {
+(function(root, factory) {	
+  /*========== Global Fossa ==========*/
   (typeof module === "object" && module.exports) ? module.exports = factory() : root.fossajs = factory();
 }(this, function() {
 
@@ -249,6 +250,37 @@ function fossa(option) {
 		}
 		else if(!headerText) {
 			console.log('Warning: No Header text \n there will be no text in the header \n it is recommended that you go and add text for the header.')
+		}
+	})();
+	//Error Handling for unknown properties
+	/*
+	 * The property will not be recognized
+	 * originally it would do nothing
+	 * For the sake of knowing
+	 * there is error handling for it
+	 * This is not necessarily a syntax error
+	 * in the HTML DOM
+	 * @param {string} object.item	
+	 */
+	
+	(function() {
+		if(!title &&
+		   !structure &&
+		   !divText &&
+		   !divBackground &&
+		   !headerText &&
+		   !optForHeader &&
+		   !padding &&
+		   !margin &&
+		   !custom &&
+		   !cClass &&
+		   !optContainer) {
+		   	console.log('A property not recognized');
+		   }
+	})();
+	(function() {
+		if (!document) {
+			console.log('You have no HTML dom to edit.');
 		}
 	})();
 }
