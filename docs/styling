@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customizing</title>
+    <link rel="stylesheet" type="text/css" href="css/get.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <h1>Fossa</h1><br>
+        <li class="install"><a href="install.html">Installation</a></li>
+        <br>
+        <li class="get"><a href="getstarted.html">Getting Started</a></li>
+        <br>
+        <li><a href="usage.html">Usage</a></li>
+        <br>
+        <li><a href="custom.html">Customizing</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <h1>Customizing</h1>
+      <p>This shows you how tou can customize fossajs, without edditing fossa.js.</p>
+      <span>
+        <pre>
+          <code>
+            <span class="var">var</span> fossa = <span class="special">new</span> fossa({
+              title: <span class="string">'custom'</span>,
+              struc: <span class="string">'custom'</span>,
+              custEl: <span class="string">'&lt;p&gt;'</span>,
+              cClass: <span class="string">'customEl'</span>,
+              divText: <span class="string">'This is a custom element'</span>
+            });
+          </code>
+        </pre>
+      </span>
+      <span>
+        <pre>
+          <code>
+            <span class="tag">&lt;head&gt;</span>
+              <span class="tag">&lt;title&gt;</span>custom<span class="tag">&lt;/title&gt;</span>
+            <span class="tag">&lt;/head&gt;</span>
+            <span class="tag">&lt;body&gt;</span>
+              <span class="tag">&lt;p</span> class=<span class="string">"customEl"</span><span class="tag">&gt;</span>This is a custom element<span class="tag">&lt;/p&gt;</span>
+            <span class="tag">&lt;body&gt;</span>
+          </code>
+        </pre>
+      </span>
+      <p>This mainly allows you to add your own custom elements using these properties: <b>struc</b>, <b>custEl</b>, <b>CClass</b>, and <b>divText</b>. Using the same value as in <b>struc</b>. You need to have 'custom' in the <b>struc</b> property to tell the javascript that it is a custom structure.</p>
+    </div>
+  </body>
+</html>
