@@ -37,9 +37,9 @@
 
 'use strict';
 
-let body = document.getElementsByTagName("body")[0];
+let bodyTag = document.getElementsByTagName("body")[0];
 let fossajs = module.exports;
-if (!body) console.log(err);
+if (!bodyTag) console.log(err);
 
 //Object Oriented
 
@@ -116,7 +116,7 @@ function fossa(option) {
 			let text = document.createTextNode(divText);
 			div2.appendChild(text);
 			div1.appendChild(div2);
-			body.appendChild(div1);
+			bodyTag.appendChild(div1);
 		}
 		// Append loose structure
 		
@@ -128,7 +128,7 @@ function fossa(option) {
 			let div3 = createElement("div id='div3'");
 			let text2 = document.createTextNode(divText);
 			div3.appendChild(text2);
-			body.appendChild(div3);
+			bodyTag.appendChild(div3);
 		}
 		// Append sagging structure
 		/*
@@ -138,7 +138,7 @@ function fossa(option) {
 			let span1 = document.createElement("span1");
 			let text3 = document.createTextNode(divText);
 			span1.appendChild(text3);
-			body.appendChild(span1);
+			bodyTag.appendChild(span1);
 		}
 	})();
 	//Custom elements
@@ -157,7 +157,7 @@ function fossa(option) {
 			div1.setAttribute('class', cClass);
 			let text = document.createTextNode(divText);
 			div1.appendChild(text);
-			body.appendChild(div1);
+			bodyTag.appendChild(div1);
 		}
 	})();
 	//Container Structure
@@ -172,7 +172,7 @@ function fossa(option) {
 			con.setAttribute('class', 'container');
 			let text = document.createTextNode(divText);
 			con.appendChild(text);
-			body.appendChild(con);
+			bodyTag.appendChild(con);
 			let containerStyle = document.getElementsByClassName('container')[0];
 			containerStyle.style.paddingRight = "100px";
 			containerStyle.style.paddingLeft = "100px";
@@ -187,7 +187,7 @@ function fossa(option) {
 	* @param {string} divBackground
 	*/
 	(function() {
-		body.style.background = divBackground;
+		bodyTag.style.background = divBackground;
 	})();
 	//Padding for body
 
@@ -199,7 +199,7 @@ function fossa(option) {
 	*/
 
 	(function() {
-		body.style.padding = padding; 
+		bodyTag.style.padding = padding; 
 	})();
 	//Margin of body
 
@@ -209,7 +209,7 @@ function fossa(option) {
 	 * @param {integer} margin
 	*/
 	(function() {
-		body.style.margin = margin;
+		bodyTag.style.margin = margin;
 	})();
 	//If statements for error handling
 
@@ -271,7 +271,7 @@ function fossa(option) {
 			let header = document.createElement("header");
 			let hText = document.createTextNode(headerText);
 			header.appendChild(hText);
-			body.appendChild(header);
+			bodyTag.appendChild(header);
 		}
 		else if(!headerText) {
 			console.log('Warning: No Header text \n there will be no text in the header \n it is recommended that you go and add text for the header.')
