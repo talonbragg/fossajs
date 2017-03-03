@@ -284,4 +284,37 @@ function fossa(option) {
 		}
 	})();
 }
+	function style(option) {
+		//Local Variables for the function
+		/*
+		 * The option el is an id
+		 * The option elClass is a class
+		 * style is eventually turned into a string
+		 * style is not typed as a string
+		 * @param {!string} option.style
+		*/
+		
+		let el = option.el;
+		let elClass = option.elClass;
+		let styleEl = option.style;
+		
+		//Functional section
+		(function() {
+			if (!elClass) {
+				let realEl = document.getElementById(el);
+				let styleString = styleEl.toString();
+				realEl.style = styleString;
+			}
+			else if(!el) {
+				let realEl = document.getElementByClassName(elClass);
+				let styleString = styleEl.toString();
+				realEl.style = styleString;
+			}
+			
+			//Error handling
+			if(!el && !style) {
+				console.log('either there are no properties or you have an unrecognized property.');
+			}
+		})();
+	}
 }));
