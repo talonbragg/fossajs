@@ -422,6 +422,11 @@ function fossa(option) {
 				}
 		     })();
 		}
+	function iterate(option) {
+		var selection = option.selection;
+		
+		let DOMEl = document.getElementsByTagName('*');
+	}
 }));
 }, {}]
 }, {}, [1]);
