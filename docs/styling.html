@@ -21,6 +21,16 @@
     <div class="right">
       <h1>Styling</h1> 
       <p>Fossa gives a styling object constructor sto easily style elements without having to load javascript and css at the same time.</p>
+      <p>Here is an example:</p>
+      <pre>
+        <code>
+          <span class="var">var</span> style = <span class="special">new</span> style({
+            el: <span class="string">'styledElement'</span>,
+            style: padding: 2;margin:20;
+          });
+        </code>
+      </pre>
+      <p>First el is the id of the element that you want to style. Then, you are probably wondering, why isn't the style element a string? This is because the javascript changes it to a string once you load the html DOM.</p>
     </div>
   </body>
 </html>
